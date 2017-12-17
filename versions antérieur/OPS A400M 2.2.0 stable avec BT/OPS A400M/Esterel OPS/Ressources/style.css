@@ -1,0 +1,296 @@
+/*@media print{
+ */
+html { font-size:100%; font:1em Geneva, sans-serif; }
+
+.matable {
+    border-left:0;
+    border-collapse : collapse;
+    text-align: center;
+    padding:1px;
+    font-size:4.8pt;
+}
+
+div, .matable{
+    font-size:normal;
+    width: auto;
+    box-sizing: content-box !important;
+    overflow: hidden;
+}
+td {
+    border:1px solid black
+    min-width:3em;
+}
+
+
+/*Ligne Sign */
+#Sign {
+    font-size:5pt;
+    text-align:left;
+    font-weight:bold;
+}
+
+#Sign tr>th {
+    min-width:200pt;
+}
+
+
+/*Tableau Exploitation*/
+#Exploitation{
+    margin-left:0;
+    font-size:4pt;
+    empty-cells:show;
+    page-break-inside:avoid;
+    border-collapse:collapse;
+}
+
+#Exploitation tr>th{
+    border:0;
+}
+#Exploitation tr>td{
+    border:1px solid black;
+    min-width:102.5pt;
+    height:2em;
+}
+
+#TBExploit {
+    empty-cells:show;
+    text-align:center;
+    font-weight:bold;
+}
+
+
+/*Premier tableau contenant les étapes en code IATA et OACI*/
+#GridOneStops {
+    margin-left: 10em;
+    border-left:0;
+}
+
+/*GridOne=Tableau contenant les équipages*/
+#GridOne{
+    border-collapse:collapse
+    background-color:#FAFAFF;
+    /*table-layout: fixed;*/
+}
+th.GridOneLeg,th.GOSCell {
+    color : black;
+    border-left:1px solid black;
+    width : 8em;
+    /*overflow: hidden;*/
+}
+
+#GridTwo, #GridThree, #TotalHours
+{
+    border-collapse : collapse;
+    background-color:#FAFAFF;
+}
+
+/*Tableau Référentiel Entraînement */
+#RefEnt
+{
+    border-collapse:collapse;
+    font-size:4.8pt;
+    empty-cells:show;
+    page-break-inside:avoid;
+    margin-left:auto;
+    margin-right:auto;
+    border: 1px solid black;
+    
+}
+#RefEnt tr>th{
+    border: 1px solid black;
+}
+#RefEnt tr>td{
+    overflow: hidden;
+    height: 1.5em;
+    border:1px solid black;
+    min-width:4em;
+}
+#RefEntSectionOneTitle, #RefEntSectionTwoTitle, #RefEntSectionThreeTitle, #RefEntSectionFourTitle, #RefEntSectionFiveTitle, #RefEntSectionSevenTitle, #RefEntSectionEightTitle {
+    background-color:#DDD;
+    height:2em;
+}
+
+#Cap {
+    height:3.5em !important;
+}
+
+#Crew {
+    min-width:75pt !important;
+    height:3em !important;
+}
+
+#Title {
+    font-size:18;
+    font-weight:normal;
+}
+
+/* Deuxième grille*/
+#GridTwo tr>th {
+    border-width:1px;
+    border-style:solid;
+    /*#B0C4DE*/
+    border-left:1px solid black;
+    /*width: 3cm;*/
+    min-width: 2em;
+}
+
+#GridTwo th:nth-child(1) {
+    width:2ex;
+}
+#GridTwo tr>td {
+    border:1px dashed black;
+    border-left:1px solid black;
+    border-right:1px solid black;
+}
+
+/*@media print{*/
+#OMA{
+    font-size: 12pt;
+    line-height: 0pt;
+    
+}
+#MissionNumber{
+    font-size: 8pt;
+    line-height: 9pt;
+}
+#Unit{
+    font-size: 8pt;
+    line-height: 9pt;
+}
+
+
+body{
+    font-size:8pt;
+    max-width:841pt !important;
+}
+
+div {/*
+      font-size:0.1em;*/
+margin-bottom:0.5cm;
+page-break-inside:avoid;
+}
+/* .matable{
+ }*/
+table {
+    /*page-break-inside:auto;*/
+    font-size:0.1em;
+}
+tr{
+    display: table-row;
+    page-break-inside:avoid;
+    /*page-break-after:auto;*/
+}
+tbody { display: table-row-group; }
+thead { display:table-header-group;}
+td {
+    border-left: 1px solid black;
+    border-top: 1px solid white;
+    min-width:0;
+}
+#GridOneStops{
+    margin-left: 70pt
+    font-size:5pt !important;
+}
+
+#GridOne
+{
+    min-width:40pt;
+    background-color:white;
+    font-size:5pt !important;
+}
+
+#TBGridOne tr:nth-child(odd), #TBGridThree tr:nth-child(odd){
+    background-color:#DDD;
+}
+#TBGridOne tr:nth-child(1) td{
+    border-top-color:black;
+}
+#TBGridOne tr>td{
+    /*color:black;*/
+}
+.GridOneNameCell
+{
+    padding-left:2pt;
+    width: 110pt;
+    text-align: left;
+}
+
+th.GridOneLeg,th.GOSCell {
+    color : black;
+    border-left: 1px solid black;
+    width : 80pt;
+}
+
+/* Deuxième grille*/
+#GridTwo {
+    margin-left:0;
+    margin-right:auto;
+    border-collapse : collapse;
+    background-color:white;
+    border:1px solid black
+}
+#GridTwo td {
+    padding:3pt;
+}
+#THGridTwo tr>th {
+    min-width: 20pt;
+}
+#THGridTwo th:nth-child(1) {
+    width: 25pt;
+}
+.whiteLine {
+    background-color:white;
+}
+.greyLine {
+    background-color:#DDD;
+}
+
+.brownSpan {
+    color : rgb(153,102,51);
+}
+.blueSpan {
+    color : rgb(0,0,255);
+    font-weight:bold;
+}
+
+/*Troisième grille servant à ajouter les dérogations*/
+
+#GridThree{
+    border-collapse : collapse;
+    font-size: 6pt;
+    empty-cells: show;
+}
+#GridThree tr>th{
+    border-width:1px;
+    border-style:solid;
+}
+#GridThree tr>td{
+    overflow: hidden;
+    min-width:4em;
+    height: 1em;
+    border-width:1px;
+    border-style:solid;
+}
+
+#Titre, #GridThree{
+    vertical-align: top;
+    display:inline-block !important;
+}
+
+
+
+/*Tableau Total Hours*/
+#TotalHours{
+    margin-right:auto;
+    margin-left:auto;
+    border: 1px solid black;
+}
+#TotalHours tr>th{
+    border: 1px solid black;
+}
+#TotalHours tr:nth-child(2) th:nth-child(2), tr td:nth-child(2){
+    border-left: 1px solid black;
+}
+#TotalHours tr td:nth-child(1){
+    border-left: 1px solid black;
+}*/

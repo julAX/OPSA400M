@@ -1,0 +1,72 @@
+.mes
+{
+	border: solid 2px black;
+	font: 'Verdana';
+    font-size: xx-small;
+	padding: 7px;
+    page-break-inside: avoid;
+}
+
+.rep
+{
+        font: 'Verdana';
+        font-size: xx-small;
+        display: inline;
+
+}
+
+cite
+{
+    display: inline;
+    font-size: xx-small;
+}
+
+.bundle
+{
+	background-color: gainsboro;
+	padding : 5px;
+}
+
+#caption
+{
+	margin: 2%;
+	font-size: 1.5em;
+}
+
+h1
+{
+	text-align: center;
+}
+
+h2
+{
+	text-indent: 10%;
+}
+
+blockquote
+{
+	border: solid 1px gray;
+	padding: 0 7px;
+    page-break-inside: avoid;
+}
+
+#right
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: inline-block;
+}
+
+#left
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+#caption
+{
+    margin: 0;
+}

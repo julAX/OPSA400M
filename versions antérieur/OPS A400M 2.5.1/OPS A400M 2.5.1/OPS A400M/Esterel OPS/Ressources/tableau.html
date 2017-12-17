@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="style.css" />
+		<title>OMA</title>
+	</head>
+	<script type="text/javascript" src="oma.js">
+		//<!--
+			//Ajoute le numéro de mission
+			
+			//-->
+	</script>
+	<body>
+		<!--
+			Corps de la page
+			
+			-->
+		<table id="Exploitation">
+			<thead>
+				<tr>
+					<th>MEAT</th>
+					<th>SICOPS</th>
+					<th>REF. ENT.</th>
+					<th>CO +BT</th>
+					<th>XLS</th>
+					<th>ATT</th>
+					<th>Registre A/C</tth>
+				</tr>
+			</thead>
+			<tbody id="TBExploit">
+			</tbody>
+		</table>
+		<div id="P1">
+			<div id="Titre">
+				<h1 id="OMA">ORDRE DE MISSION AERIENNE</h1>
+				<h2 id="MissionNumber"></h2>
+				<h3 id="Unit"></h3>
+				<div id="Comment"></div>
+			</div>
+			<table class="matable" id="GridOne">
+				<thead id="THGridOne">
+					<!-- En-tête du tableau -->
+				</thead>
+				<tbody id="TBGridOne"></tbody>
+			</table>
+		</div>
+		<div id="P3">
+			<table class="matable" id="GridTwo">
+				<thead id="THGridTwo">
+					<tr>
+						<th rowspan="3">Leg</th>
+						<th rowspan="3">Aircraft</th>
+						<th rowspan="3">Callsign</th>
+						<th rowspan="3">Be</th>
+						<th rowspan="3">Na</th>
+						<th rowspan="3" colspan="2">Departure</th>
+						<th rowspan="3" colspan="2">Arrival</th>
+						<th colspan="6">Time</th>
+						<th></th>
+						<th></th>
+						<th></th>
+						<th colspan="5">Loads</th>
+						<th colspan="4">Fuel</th>
+						<!--<th rowspan="3">% of payload</th>-->
+					</tr>
+					<tr>
+						<th colspan="2" rowspan="2">DAY</th>
+						<th colspan="2" rowspan="2">NIGHT</th>
+						<th>Incl LLF</th>
+						<th rowspan="2">Total A/C</th>
+						<th>T/G</th>
+						<th rowspan="2">Land</th>
+						<th>Flight rules</th>
+						<th rowspan="2"></th>
+						<th rowspan="2">Loading</th>
+						<th rowspan="2">On Board</th>
+						<th rowspan="2">Drop</th>
+						<th rowspan="2">Unloading</th>
+						<th>BM 19</th>
+						<th>Received</th>
+						<th>Delivered</th>
+						<th rowspan="2">N° BM 19</th>
+					</tr>
+					<tr>
+						<th>Total Crew</th>
+						<th>G/A</th>
+						<th>Type of flight</th>
+						<th>Before flight</th>
+						<th>FU</th>
+						<th>After flight FOB</th>
+					</tr>
+				</thead>
+				<tbody id="TBGridTwo">
+					<tr id="GridTwoLineOne">
+						<td rowspan="2" class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell" colspan="2"></td>
+						<td class="GridTwoCell" colspan ="2"></td>
+						<td class="GridTwoCell coef"></td>
+						<td class="GridTwoCell coef"></td>
+						<td class="GridTwoCell coef"></td>
+						<td class="GridTwoCell coef"></td>
+						<td class="GridTwoCell"></td>
+						<td rowspan="2" class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td rowspan="2" class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell">PAX</td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<!-- <td class="GridTwoCell" rowspan="2"></td> le % of payload n'est plus utilisé -->
+					</tr>
+					<tr id="GridTwoLineTwo">
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td colspan="2" class="GridTwoCell"></td>
+						<td colspan="2" class="GridTwoCell"></td>
+						<td class="GridTwoCell coef"></td>
+						<td class="GridTwoCell coef"></td>
+						<td class="GridTwoCell coef"></td>
+						<td class="GridTwoCell coef"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell">Freight</td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+						<td class="GridTwoCell"></td>
+					</tr>
+				</tbody>
+			</table>
+			<div id="P4">
+				<table class="matable" id="TotalHours">
+					<thead id="THTotalHours">
+						<tr>
+							<th colspan="10">Total hours</th>
+						</tr>
+						<tr>
+							<th class="totth">Total Day</th>
+							<th class="totth">Total Night</th>
+							<th>Day 35</th>
+							<th>Day 22</th>
+							<th>Day 10</th>
+							<th>Day 62</th>
+							<th>Night 35</th>
+							<th>Night 22</th>
+							<th>Night 10</th>
+							<th>Night 62</th>
+						</tr>
+					</thead>
+					<tbody id="TBTotalHours">
+					</tbody>
+				</table>
+				<BR>
+				<table id="Sign">
+					<thead>
+						<tr>
+							<th>Captain's signature :</th>
+							<th>SecOps signature :</th>
+							<th>XO's signature :</th>
+							<th>Check conformity with autorisation register</th>
+						</tr>
+					</thead>
+					<tbody >
+						<tr id = "signatures">
+							<td class = "signatures"> &nbsp;</td>
+							<td class = "signatures"> &nbsp;</td>
+							<td class = "signatures"> &nbsp;</td>
+							<td class = "signatures"> &nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+				<BR>
+			</div>
+			<div>
+				<table class="matable" id="RefEnt">
+					<!---<thead>
+						<tr>
+						    <th colspan="100%" id="Title">TO BE COMPLETED BY EVERY CAPTAIN AFTER A MISSION</th>
+						</tr>
+						<tr>
+						    <th colspan="2">ITEMS</th>
+						    <th>RMK</th>
+						    <th>REF</th>
+						    <th colspan="100%">CREW NAMES</th>
+						</tr>
+						</thead>--->
+					<thead>
+						<tr id="THRefEnt">
+							<th colspan ="4">TO BE COMPLETED BY EVERY CAPTAIN AFTER A MISSION :</th>
+						</tr>
+						<tr id="THrefEnt2">
+							<th>ITEM</th>
+							<th>REFERENCE</th>
+							<th>PRACTICAL TRAINING</th>
+							<th>RECURRENCY</th>
+							
+						</tr>
+					</thead>
+					<tbody id="TBRefEnt">
+						<tr id="RefEntSectionOneTitle">
+							<td class="RefEntCell">LICENCE PROFICIENCY CHECKS</td>
+							<td colspan="3" class="RefEntCell">PART FCL</td>
+						</tr>
+						<tr id="RefEntSection1">
+							<td class="RefEntCell">Last flight or FFS</td>
+							<td class="RefEntCell">LATEST</td>
+							<td class="RefEntCell">BOTH</td>
+							<td class="RefEntCell">45 Days</td>
+						</tr>
+						<tr id="RefEntSection2">
+							<td class="RefEntCell">Academic control</td>
+							<td class="RefEntCell">ACADEMIC</td>
+							<td class="RefEntCell">AI</td>
+							<td class="RefEntCell">Yearly</td>
+						</tr>
+						<tr id="RefEntSection3">
+							<td class="RefEntCell">Type rating skill test</td>
+							<td class="RefEntCell">TRC</td>
+							<td class="RefEntCell">FFS</td>
+							<td class="RefEntCell">Yearly</td>
+						</tr>
+						<tr id="RefEntSection4">
+							<td class="RefEntCell">Line check</td>
+							<td class="RefEntCell">LINE</td>
+							<td class="RefEntCell">A/C</td>
+							<td class="RefEntCell">Yearly</td>
+						</tr>
+						<tr id="RefEntSection5">
+							<td class="RefEntCell">Type rating instructor control</td>
+							<td class="RefEntCell">TRI</td>
+							<td class="RefEntCell">BOTH</td>
+							<td class="RefEntCell">36 Months</td>
+						</tr>
+						<tr id="RefEntSectionTwoTitle">
+							<td class="RefEntCell">OPERATOR PROFICIENCY CHECKS</td>
+							<td colspan="3" class="RefEntCell">PART ORO</td>
+						</tr>
+						<tr id="RefEntSection6">
+							<td class="RefEntCell">Rejected Take-Off</td>
+							<td class="RefEntCell">A</td>
+							<td class="RefEntCell">FFS</td>
+							<td class="RefEntCell">Half-yearly</td>
+						</tr>
+						<tr id="RefEntSection7">
+							<td class="RefEntCell">Take-Off with engine failure between V1 and V2</td>
+							<td class="RefEntCell">B</td>
+							<td class="RefEntCell">FFS</td>
+							<td class="RefEntCell">Half-yearly</td>
+						</tr>
+						<tr id="RefEntSection8">
+							<td class="RefEntCell">Precision approach to minima with one engine inoperative</td>
+							<td class="RefEntCell">C</td>
+							<td class="RefEntCell">FFS</td>
+							<td class="RefEntCell">Half-yearly</td>
+						</tr>
+						<tr id="RefEntSection9">
+							<td class="RefEntCell">Non-precision approach to minima</td>
+							<td class="RefEntCell">D</td>
+							<td class="RefEntCell">FFS</td>
+							<td class="RefEntCell">Half-yearly</td>
+						</tr>
+						<tr id="RefEntSection10">
+							<td class="RefEntCell">Missed approach on instruments from minima with one engine inoperative</td>
+							<td class="RefEntCell">E</td>
+							<td class="RefEntCell">FFS</td>
+							<td class="RefEntCell">Half-yearly</td>
+						</tr>
+						<tr id="RefEntSection11">
+							<td class="RefEntCell">Landing with one engine inoperative</td>
+							<td class="RefEntCell">F</td>
+							<td class="RefEntCell">FFS</td>
+							<td class="RefEntCell">Half-yearly</td>
+						</tr>
+						<tr id="RefEntSectionThreeTitle">
+							<td class="RefEntCell">SPECIFIC APPROVAL</td>
+							<td colspan="3" class="RefEntCell">PART SPA</td>
+						</tr>
+						<tr id="RefEntSection12">
+							<td class="RefEntCell">ILS CAT II approach</td>
+							<td class="RefEntCell">LVO APP</td>
+							<td class="RefEntCell">BOTH(MINIMUM 2 BY 4 ON FFS)</td>
+							<td class="RefEntCell">Half-yearly</td>
+						</tr>
+						<tr id="RefEntSection13">
+							<td class="RefEntCell">G/A at DH after CAT II approach</td>
+							<td class="RefEntCell">LVO G/A</td>
+							<td class="RefEntCell">FFS</td>
+							<td class="RefEntCell">Half-yearly</td>
+						</tr>
+						<tr id="RefEntSection14">
+							<td class="RefEntCell">Landing after a CAT II approach</td>
+							<td class="RefEntCell">LVO LND</td>
+							<td class="RefEntCell">BOTH</td>
+							<td class="RefEntCell">Half-yearly</td>
+						</tr>
+						<tr id="RefEntSection15">
+							<td class="RefEntCell">LVTO at the lowest applicable minima</td>
+							<td class="RefEntCell">LVTO</td>
+							<td class="RefEntCell">FFS</td>
+							<td class="RefEntCell">Half-yearly</td>
+						</tr>
+						<tr id="RefEntSection16">
+							<td class="RefEntCell">Three ferry flight</td>
+							<td class="RefEntCell">3 ENG</td>
+							<td class="RefEntCell">FFS</td>
+							<td class="RefEntCell">36 Months</td>
+						</tr>
+						<tr id="RefEntSection17">
+							<td class="RefEntCell">RVSM Procedures</td>
+							<td class="RefEntCell">RVSM</td>
+							<td class="RefEntCell">BOTH</td>
+							<td class="RefEntCell">24 Months</td>
+						</tr>
+						<tr id="RefEntSection18">
+							<td class="RefEntCell">MNPS Procedures</td>
+							<td class="RefEntCell">MNPS</td>
+							<td class="RefEntCell">BOTH</td>
+							<td class="RefEntCell">24 Months</td>
+						</tr>
+						<tr id="RefEntSection19">
+							<td class="RefEntCell">EVS approach</td>
+							<td class="RefEntCell">EVS</td>
+							<td class="RefEntCell">BOTH</td>
+							<td class="RefEntCell">24 Months</td>
+						</tr>
+						<tr id="RefEntSection20">
+							<td class="RefEntCell">RNP approach</td>
+							<td class="RefEntCell">RNP</td>
+							<td class="RefEntCell">BOTH</td>
+							<td class="RefEntCell">Yearly</td>
+						</tr>
+						<tr id="RefEntSection21">
+							<td class="RefEntCell">Day basic handling</td>
+							<td class="RefEntCell">DAY HDLG</td>
+							<td class="RefEntCell">A/C</td>
+							<td class="RefEntCell">Half-yearly</td>
+						</tr>
+						<tr id="RefEntSection22">
+							<td class="RefEntCell">Night basic handling</td>
+							<td class="RefEntCell">NIGHT HDLG</td>
+							<td class="RefEntCell">A/C</td>
+							<td class="RefEntCell">Yearly</td>
+						</tr>
+						<tr id="RefEntSectionFourTitle">
+							<td class="RefEntCell">TACTICAL TRAINING</td>
+							<td colspan="3" class="RefEntCell">PART TACT</td>
+						</tr>
+						<tr id="RefEntSection23">
+							<td class="RefEntCell">Electronic warfare</td>
+							<td class="RefEntCell">EW</td>
+							<td class="RefEntCell">AI</td>
+							<td class="RefEntCell">36 Months</td>
+						</tr>
+						<tr id="RefEntSection24">
+							<td class="RefEntCell">CSAR procedure</td>
+							<td class="RefEntCell">CSAR</td>
+							<td class="RefEntCell">AI</td>
+							<td class="RefEntCell">36 Months</td>
+						</tr>
+						<tr id="RefEntSection25">
+							<td class="RefEntCell">Day tactical arrival</td>
+							<td class="RefEntCell">DAY ARR</td>
+							<td class="RefEntCell">BOTH</td>
+							<td class="RefEntCell">6 Months</td>
+						</tr>
+						<tr id="RefEntSection26">
+							<td class="RefEntCell">Night tactical arrival</td>
+							<td class="RefEntCell">NIGHT ARR</td>
+							<td class="RefEntCell">BOTH</td>
+							<td class="RefEntCell">3 Months</td>
+						</tr>
+						<tr id="RefEntSection27">
+							<td class="RefEntCell">Steep descent</td>
+							<td class="RefEntCell">STEEP</td>
+							<td class="RefEntCell">BOTH</td>
+							<td class="RefEntCell">6 Months</td>
+						</tr>
+						<tr id="RefEntSection28">
+							<td class="RefEntCell">Day low level flight</td>
+							<td class="RefEntCell">DAY LLF</td>
+							<td class="RefEntCell">BOTH</td>
+							<td class="RefEntCell">Yearly</td>
+						</tr>
+						<tr id="RefEntSection29">
+							<td class="RefEntCell">Night low level flight</td>
+							<td class="RefEntCell">NIGHT LLF</td>
+							<td class="RefEntCell">BOTH</td>
+							<td class="RefEntCell">Yearly</td>
+						</tr>
+						<tr id="RefEntSectionEight">
+							<td id="Cap">Captain Name</td>
+							<td id="cdbName"></td>
+							<td id="Cap">Captain Signature</td>
+							<td colspan="2"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

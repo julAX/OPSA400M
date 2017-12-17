@@ -1,0 +1,36 @@
+.mes
+{
+	border: solid 2px black;
+	font: 'Verdana' 1.2em;
+	padding: 3%;
+}
+
+
+.bundle
+{
+	background-color: gainsboro;
+	padding : 2%;
+	page-break-inside: avoid;
+}
+
+#caption
+{
+	margin: 5%;
+	font-size: 1.5em;
+}
+
+h1
+{
+	text-align: center;
+}
+
+h2
+{
+	text-indent: 10%;
+}
+
+blockquote
+{
+	border: solid 1px gray;
+	padding: 1%;
+}

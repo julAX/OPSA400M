@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css" />
+        <title>OMA</title>
+        
+    </head>
+    <script type="text/javascript" src="oma.js">
+        //<!--
+        //Ajoute le numéro de mission
+        
+        //-->
+        </script>
+    <body><!--
+           Corps de la page
+           --><div id="P1">
+               <div id="PP">
+               <div id="Titre">
+                   <h1 id="OMA">ORDRE DE MISSION AERIENNE</h1>
+                   <h2 id="MissionNumber"></h2>
+                   <h3 id="Unit"></h3>
+                   <div id="Comment"></div>
+               </div></div>
+                
+               <table class="matable" id="GridOne">
+                   <thead id="THGridOne"><!-- En-tête du tableau --></thead>
+                   <tbody id="TBGridOne"></tbody>
+               </table>
+
+           </div>
+           <div id="P3">
+               <div id="P2">
+                   <table class="matable" id="GridTwo">
+                       <thead id="THGridTwo">
+                           <tr>
+                               <th rowspan="3">Leg</th>
+                               <th rowspan="3">Aircraft</th>
+                               <th rowspan="3">Callsign</th>
+                               <th rowspan="3">Be</th>
+                               <th rowspan="3">Na</th>
+                               <th rowspan="3" colspan="2">Departure</th>
+                               <th rowspan="3" colspan="2">Arrival</th>
+                               <th colspan="6">Time</th>
+                               <th></th>
+                               <th></th>
+                               <th></th>
+                               <th colspan="5">Loads</th>
+                               <th colspan="4">Fuel</th>
+                               <th rowspan="3">% of payload</th>
+                           </tr>
+                           <tr>
+                               <th colspan="2" rowspan="2">DAY</th>
+                               <th colspan="2" rowspan="2">NIGHT</th>
+                               <th>Incl LLF</th>
+                               <th rowspan="2">Total A/C</th>
+                               <th>T/G</th>
+                               <th rowspan="2">Land</th>
+                               <th>Flight rules</th>
+                               <th rowspan="2"></th>
+                               <th rowspan="2">Loading</th>
+                               <th rowspan="2">On Board</th>
+                               <th rowspan="2">Drop</th>
+                               <th rowspan="2">Unloading</th>
+                               <th>BM 19</th>
+                               <th>Received</th>
+                               <th>Delivered</th>
+                               <th rowspan="2">N° BM 19</th>
+                               
+                           </tr>
+                           <tr>
+                               <th>Total Crew</th>
+                               <th>G/A</th>
+                               <th>Type of flight</th>
+                               <th>Before flight</th>
+                               <th>FU</th>
+                               <th>After flight FOB</th>
+                           </tr>
+                       </thead>
+                       <tbody id="TBGridTwo">
+                           <tr id="GridTwoLineOne">
+                               <td rowspan="2" class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td rowspan="2" class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td rowspan="2" class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell">PAX</td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell" rowspan="2"></td>
+                           </tr>
+                           <tr id="GridTwoLineTwo">
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td colspan="2" class="GridTwoCell"></td>
+                               <td colspan="2" class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell">Freight</td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                               <td class="GridTwoCell"></td>
+                           </tr>
+
+                                                </tbody>
+                   </table>
+               </div>
+               
+               
+               
+               <div id="P4">
+                   
+                   
+                   <table class="matable" id="TotalHours">
+                       <thead id="THTotalHours">
+                           <tr>
+                               <th colspan="8">Total hours</th>
+                           </tr>
+                           <tr>
+                               <th>Day 35</th>
+                               <th>Day 22</th>
+                               <th>Day 10</th>
+                               <th>Day 62</th>
+                               <th>Night 35</th>
+                               <th>Night 22</th>
+                               <th>Night 10</th>
+                               <th>Night 62</th>
+                           </tr>
+                       </thead>
+                       <tbody id="TBTotalHours">
+                       </tbody>
+                   </table>
+                   
+                   <BR>
+                   
+                   
+
+                   
+                   <table id="Sign">
+                       <thead>
+                           <tr>
+                               <th>Captain's signature :</th>
+                               <th>SecOps signature :</th>
+                               <th>XO's signature :</th>
+                               <th>Check conformity with autorisation register</th>
+                           </tr>
+                       </thead>
+                       <tbody>
+                       </tbody>
+                   </table>
+                   
+                   <BR>
+                   
+                   <table id="Exploitation">
+                       <thead>
+                           <tr>
+                               <th>MEAT</th>
+                               <th>SICOPS</th>
+                               <th>REF. ENT.</th>
+                               <th>CO +BT</th>
+                               <th>XLS</th>
+                               <th>ATT</th>
+                               <th>Registre A/C</tth>
+                                   </tr>
+                       </thead>
+                       <tbody id="TBExploit">
+                       </tbody>
+                   </table>
+                   
+                   
+               </div>
+               
+               
+               
+               
+               <div>
+                   <table class="matable" id="RefEnt">
+                       <!---<thead>
+                           <tr>
+                               <th colspan="100%" id="Title">TO BE COMPLETED BY EVERY CAPTAIN AFTER A MISSION</th>
+                           </tr>
+                           <tr>
+                               <th colspan="2">ITEMS</th>
+                               <th>RMK</th>
+                               <th>REF</th>
+                               <th colspan="100%">CREW NAMES</th>
+                           </tr>
+                       </thead>--->
+                       <thead>
+                           <tr id="THRefEnt">
+                               <th colspan ="4">TO BE COMPLETED BY EVERY CAPTAIN AFTER A MISSION :</th>
+                            </tr>
+                       </thead>
+                       <tbody id="TBRefEnt">
+                           <tr id="RefEntSectionOneTitle">
+                               <td colspan="4" class="RefEntCell">Section 1</td>
+                               
+                           </tr>
+                           <tr id="RefEntSection1">
+                               <td colspan="2" class="RefEntCell">Flight Preparation</td>
+                               <td class="RefEntCell">With instructor</td>
+                               <td class="RefEntCell">1.1</td>
+                               
+                           </tr>
+                            <tr id="RefEntSection2">
+                               <td colspan="2" class="RefEntCell">Aeroplane external visual inspection (location ofeach item and purpose of inspection)</td>
+                               <td class="RefEntCell">With instructor</td>
+                               <td class="RefEntCell">1.2</td>
+                               
+                               
+                           </tr>
+                            
+                            <tr id="RefEntSection3">
+                               <td colspan="2" class="RefEntCell">Cockpit Inspection</td>
+                               <td class="RefEntCell">With instructor</td>
+                               <td class="RefEntCell">1.3</td>
+                           </tr>
+
+
+                           
+                           <tr id="RefEntSection4">
+                               <td colspan="2" class="RefEntCell">Use of C/L prior to starting engines (starting procedures, radio and navigation equipment check, <BR> selection and setting of navigation and communication frequencies)</td>
+                               <td class="RefEntCell">With instructor</td>
+                               <td class="RefEntCell">1.4</td>
+                           </tr>
+                           
+                           <tr id="RefEntSectionTwoTitle">
+                               <td colspan="4" class="RefEntCell">Section 2</td>
+                               
+                           </tr>
+                           <tr id="RefEntSection5">
+                               <td colspan="2" class="RefEntCell">Instrument Take-Off (transition flight to instrument during rotation or immediately after becoming airborne)</td>
+                               <td class="RefEntCell"></td>
+                               <td class="RefEntCell">2.2</td>
+                               
+                               
+                           </tr>
+                           <tr id="RefEntSection6">
+                               <td colspan="2" class="RefEntCell">Cross Wind Take-Off (to maximum X-wind bearable by the A/C)</td>
+                               <td class="RefEntCell"></td>
+                               <td class="RefEntCell">2.3</td>
+                               
+                           </tr>
+                           <tr id="RefEntSection7">
+                               <td colspan="2" class="RefEntCell">Take-Off at maximum Take-Off weight (LH MTOW)</td>
+                               <td class="RefEntCell"></td>
+                               <td class="RefEntCell">2.4</td>
+                               
+                           </tr>
+                           <tr id="RefEntSectionThreeTitle">
+                               <td colspan="4" class="RefEntCell">Section 3</td>
+                              
+                               
+                           </tr>
+                           <tr id="RefEntSection8">
+                               <td rowspan="14" class="RefEntCell">Normal and Abnormal operation of systems</td>
+                               <td class="RefEntCell">Engine propeller</td>
+                               <td class="RefEntCell">Theoretical review with an instructor</td>
+                               <td class="RefEntCell">3.4.0</td>
+                               
+                               
+                           </tr>
+                           <tr id="RefEntSection9">
+                               <td class="RefEntCell">Pressurisation and Air conditionning</td>
+                               <td class="RefEntCell">Theoretical review with an instructor</td>
+                               <td class="RefEntCell">3.4.1</td>
+                               
+                               
+                           </tr>
+                           <tr id="RefEntSection10">
+                               <td class="RefEntCell">Pitot ans static systems</td>
+                               <td class="RefEntCell">Theoretical review with an instructor</td>
+                               <td class="RefEntCell">3.4.2</td>
+                               
+                               
+                           </tr>
+                           <tr id="RefEntSection11">
+                               <td class="RefEntCell">Fuel System</td>
+                               <td class="RefEntCell">Theoretical review with an instructor</td>
+                               <td class="RefEntCell">3.4.3</td>
+                               
+                               
+                           </tr>
+                           <tr id="RefEntSection12">
+                               <td class="RefEntCell">Electrical system</td>
+                               <td class="RefEntCell">Theoretical review with an instructor</td>
+                               <td class="RefEntCell">3.4.4</td>
+                               
+                               
+                           </tr>
+                           <tr id="RefEntSection13">
+                               <td class="RefEntCell">Hydraulic system</td>
+                               <td class="RefEntCell">Theoretical review with an instructor</td>
+                               <td class="RefEntCell">3.4.5</td>
+                               
+                           </tr>
+                           <tr id="RefEntSection14">
+                               <td class="RefEntCell">Flight control and trim system</td>
+                               <td class="RefEntCell">Theoretical review with an instructor</td>
+                               <td class="RefEntCell">3.4.6</td>
+                           </tr>
+                           <tr id="RefEntSection15">
+                               <td class="RefEntCell">Anti-icing and de-icing system</td>
+                               <td class="RefEntCell">Theoretical review with an instructor</td>
+                               <td class="RefEntCell">3.4.7</td>
+                               
+                           </tr>
+                           <tr id="RefEntSection16">
+                               <td class="RefEntCell">A/P and F/D system</td>
+                               <td class="RefEntCell">Theoretical review with an instructor</td>
+                               <td class="RefEntCell">3.4.8</td>
+                               
+                               
+                           </tr>
+                           <tr id="RefEntSection17">
+                               <td class="RefEntCell">GPWS, weather radar and RA</td>
+                               <td class="RefEntCell">Theoretical review with an instructor</td>
+                               <td class="RefEntCell">3.4.10</td>
+                               
+                           </tr>
+                           <tr id="RefEntSection18">
+                               <td class="RefEntCell">FMS system and RN system</td>
+                               <td class="RefEntCell">Theoretical review with an instructor</td>
+                               <td class="RefEntCell">3.4.11</td>
+                               
+                           </tr>
+                           <tr id="RefEntSection19">
+                               <td class="RefEntCell">Landing gear and brakes</td>
+                               <td class="RefEntCell">Theoretical review with an instructor</td>
+                               <td class="RefEntCell">3.4.12</td>
+                               
+                           </tr>
+                           <tr id="RefEntSection20">
+                               <td class="RefEntCell">Flap system</td>
+                               <td class="RefEntCell">Theoretical review with an instructor</td>
+                               <td class="RefEntCell">3.4.13</td>
+                               
+                               
+                           </tr>
+                           <tr id="RefEntSection21">
+                               <td class="RefEntCell">APU system</td>
+                               <td class="RefEntCell">Theoretical review with an instructor</td>
+                               <td class="RefEntCell">3.4.14</td>
+                           </tr>
+                           <tr id="RefEntSectionFourTitle">
+                               <td colspan="4">Section 4</td>
+                          
+                               
+                               
+                           </tr>
+                           
+                           <tr id="RefEntSection22">
+                               <td colspan="2">Holding procedures (including RNAV holding)</td>
+                               <td></td>
+                               <td>3.9.2</td>
+                               
+                           </tr>
+                           <tr id="RefEntSection23">
+                               <td colspan="2">CAT 1 approach manually</td>
+                               <td></td>
+                               <td>3.9.3.1</td>
+                               
+                           </tr>
+                           <tr id="RefEntSection24">
+                               <td colspan="2">CAT 1 approach manually with LS</td>
+                               <td></td>
+                               <td>3.9.3.2</td>
+                               
+                           </tr>
+                           <tr id="RefEntSection25">
+                               <td colspan="2">CAT 1 approach with LS and AP</td>
+                               <td></td>
+                               <td>3.9.3.3</td>
+                               
+                           </tr>
+                           <tr id="RefEntSection26">
+                               <td colspan="2">Non precision approach</td>
+                               <td></td>
+                               <td>3.9.4</td>
+                               
+                           </tr>
+                           <tr id="RefEntSection27">
+                               <td colspan="2">Circling Approach</td>
+                               <td></td>
+                               <td>3.9.5</td>
+                               
+                               <tr id="RefEntSectionFiveTitle">
+                                   <td colspan="4">Section 5</td>
+                                   
+                                   
+                                   
+                               </tr>
+                               <tr id="RefEntSection28">
+                                   <td colspan="2">Normal landing</td>
+                                   <td></td>
+                                   <td>5.1</td>
+                                   
+                               </tr>
+                               <tr id="RefEntSection29">
+                                   <td colspan="2">Cross wind landing (to maximum X-wind bearable by the A/C)</td>
+                                   <td></td>
+                                   <td>5.3</td>
+                                   
+                               </tr>
+                               <tr id="RefEntSectionSevenTitle">
+                                   <td colspan="4">Section 7</td>
+                                  
+                                   
+                                   
+                               </tr>
+                               <tr id="RefEntSection30">
+                                   <td colspan="2">RVSM Procedures</td>
+                                   <td></td>
+                                   <td></td>
+                                   
+                                   
+                               </tr>
+                               <tr id="RefEntSection31">
+                                   <td colspan="2">Altimeter fault in RVSM area</td>
+                                   <td>Theoretical review with an instructor</td>
+                                   <td></td>
+                                   
+                                   
+                               </tr>
+                               <tr id="RefEntSection32">
+                                   <td colspan="2">MNPS procedures</td>
+                                   <td></td>
+                                   <td></td>
+                                   
+                                   
+                               </tr>
+                               <tr id="RefEntSection33">
+                                   <td colspan="2">EVS approach</td>
+                                   <td></td>
+                                   <td></td>
+                                   
+                                   
+                               </tr>
+                               <tr id="RefEntSection34">
+                                   <td colspan="2">RNP approach PF</td>
+                                   <td></td>
+                                   <td></td>
+                                   
+                               </tr>
+                               <tr id="RefEntSection35">
+                                   <td colspan="2">RNP approach PM</td>
+                                   <td></td>
+                                   <td></td>
+                                   
+                                   
+                               </tr>
+                               <tr id="RefEntSection36">
+                                   <td colspan="2">Day basic handling</td>
+                                   <td></td>
+                                   <td></td>
+                                   
+                                   
+                               </tr>
+                               <tr id="RefEntSection37">
+                                   <td colspan="2">Night basic handling</td>
+                                   <td></td>
+                                   <td></td>
+                                   
+                               </tr>
+                               <tr id="RefEntSectionEightTitle">
+                                   <td colspan="4">Section 8</td>
+
+                                   
+                                   
+                               </tr>
+                               <tr id="RefEntSection38">
+                                   <td colspan="2">Day tactical arrival</td>
+                                   <td></td>
+                                   <td></td>
+                                   
+                                   
+                               </tr>
+                               <tr id="RefEntSection39">
+                                   <td colspan="2">Night tactical arrival</td>
+                                   <td></td>
+                                   <td></td>
+                                   
+                               </tr>
+                               <tr id="RefEntSection40">
+                                   <td colspan="2">Steep descent</td>
+                                   <td></td>
+                                   <td></td>
+                                   
+                                   
+                               </tr>
+                               <tr id="RefEntSection41">
+                                   <td colspan="2">Day low level flight</td>
+                                   <td></td>
+                                   <td></td>
+                                   
+                               </tr>
+                               <tr id="RefEntSection42">
+                                   <td colspan="2">Night low level flight</td>
+                                   <td></td>
+                                   <td></td>
+                                   
+                               </tr>
+                               <tr id="RefEntSectionEight">
+                                   <td id="Cap">Captain Name</td>
+                                   <td id="cdbName"></td>
+                                   <td id="Cap">Captain Signature</td>
+                                   <td colspan="2"></td>
+                               </tr>
+                               </tbody>
+                   </table>
+               </div>
+               
+           </div>
+           
+           
+           
+           
+    </body>
+</html>

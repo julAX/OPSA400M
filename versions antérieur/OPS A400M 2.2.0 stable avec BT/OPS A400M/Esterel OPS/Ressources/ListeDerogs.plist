@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Derog</key>
+	<array>
+		<dict>
+			<key>Commentaires</key>
+			<string></string>
+			<key>Nature</key>
+			<string></string>
+			<key>Numero</key>
+			<string></string>
+			<key>Ordonnateur</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>Commentaires</key>
+			<string></string>
+			<key>Nature</key>
+			<string>FDP extension</string>
+			<key>Numero</key>
+			<string>FRA-01-9.2.1</string>
+			<key>Ordonnateur</key>
+			<string>Aircraft Commander</string>
+		</dict>
+		<dict>
+			<key>Commentaires</key>
+			<string></string>
+			<key>Nature</key>
+			<string>Crew rest out station</string>
+			<key>Numero</key>
+			<string>FRA-01-12.2.2</string>
+			<key>Ordonnateur</key>
+			<string>EATC French SNR</string>
+		</dict>
+		<dict>
+			<key>Commentaires</key>
+			<string></string>
+			<key>Nature</key>
+			<string>Equipage minimum de sécurité cabine</string>
+			<key>Numero</key>
+			<string>04.03.18</string>
+			<key>Ordonnateur</key>
+			<string>OPCON</string>
+		</dict>
+		<dict>
+			<key>Commentaires</key>
+			<string></string>
+			<key>Nature</key>
+			<string>EQUIPAGE doublé A400M</string>
+			<key>Numero</key>
+			<string>04.02.13</string>
+			<key>Ordonnateur</key>
+			<string>OPCON</string>
+		</dict>
+		<dict>
+			<key>Commentaires</key>
+			<string></string>
+			<key>Nature</key>
+			<string>Terrain isolé</string>
+			<key>Numero</key>
+			<string>07.02.36</string>
+			<key>Ordonnateur</key>
+			<string>OPCON</string>
+		</dict>
+		<dict>
+			<key>Commentaires</key>
+			<string></string>
+			<key>Nature</key>
+			<string>Niveau SSIS</string>
+			<key>Numero</key>
+			<string>07.02.20</string>
+			<key>Ordonnateur</key>
+			<string>OPCON</string>
+		</dict>
+	</array>
+</dict>
+</plist>

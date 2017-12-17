@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+        <title>Procès verbal d'exploitation</title>
+		<link rel="stylesheet" href="PVE.css" />
+		<script src="PVE.js"></script>
+
+	</head>
+	<body>
+		<h1>Procès cerbal d'exploitation</h1>
+		<p id="caption">Mission :<br><br>PCB :</p>
+		<hr />
+		<!-- Modèle
+		<h2>Leg Num</h2>
+		<div class="bundle">
+		<pre class="mes">message</pre>
+		<blockquote>
+			<cite>Réponse : </cite>
+			<p class="rep">ici le text de la reponse</p>
+		</blockquote>
+		</div>
+		-->
+		<script>
+			setCaption('000000','cdb');
+			addLeg('1');
+			addMessages(2);
+			addLeg('2');
+			addMessages(3);
+			fillMessages(['message1\nret','message2\n ret','message3 \n ret','message4','message5'],['message1\nret','message2\n ret','message3 \n ret','message4','message5']);
+		</script>
+	</body>
+</html>
